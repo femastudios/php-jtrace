@@ -35,3 +35,10 @@ Each `JTrace` instance can be customized with the following parameters:
     * **Include complex arguments**: whether to include non-trivial arguments in function calls. When `false` scalar types are written normally, for other types the type is written. When `true` an attempt to convert classes an arrays to string is made. Defaults to `false`.
     * **Arguments max length**: the maximum length for **all** the arguments for each line. When exceeded arguments are automatically separately shortened according to their size. Defaults to `1024`. 
 
+Example of customization:
+```php
+JTrace::new()
+    ->includeBaseArgs() // Includes only scalar args
+    ->maxItems(null) // Removes the items limit
+    ->maxCauses(8); // Limits the number of chained exceptions to 8
+```
