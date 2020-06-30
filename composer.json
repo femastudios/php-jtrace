@@ -2,7 +2,7 @@
     "name": "femastudios/jtrace",
     "description": "A PHP library to create Java-like stacktraces",
     "type": "library",
-    "license": "GNU General Public License v3.0",
+    "license": "GPL-3.0-only",
     "authors": [
         {
             "name": "Mauro Molin",
