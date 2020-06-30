@@ -1,0 +1,27 @@
+{
+    "name": "femastudios/jtrace",
+    "description": "A PHP library to create Java-like stacktraces",
+    "type": "library",
+    "license": "GNU General Public License v3.0",
+    "authors": [
+        {
+            "name": "Mauro Molin",
+            "email": "molin.mauro@femastudios.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.3",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "com\\femastudios\\jtrace\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "com\\femastudios\\jtrace\\tests\\": "tests/"
+        }
+    }
+}
