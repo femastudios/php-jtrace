@@ -238,7 +238,7 @@
          * @param $value mixed a value
          * @return string its string representation. If its string representation cannot be found, its type from {@link self::getType} will be returned
          */
-        public static function itemToString($value) : string {
+        private static function itemToString($value) : string {
             if ($value === null) {
                 return 'null';
             } elseif ($value instanceof \DateTimeInterface) {
@@ -274,7 +274,7 @@
          * @param $value mixed the value to obtain the type of
          * @return string the type name
          */
-        public static function getType($value) : string {
+        private static function getType($value) : string {
             if (\is_object($value)) {
                 return \get_class($value);
             } else {
@@ -288,7 +288,7 @@
          * @param mixed $value a value to test
          * @return bool true if value can be casted to string
          */
-        public static function canBeCastedToString($value) : bool {
+        private static function canBeCastedToString($value) : bool {
             return !\is_array($value) && (
                     (!\is_object($value) && settype($value, 'string') !== false) ||
                     (\is_object($value) && method_exists($value, '__toString'))
